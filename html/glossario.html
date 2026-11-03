@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Glossário – Política Acessível</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <a class="pular" href="#conteudo">Ir para o conteúdo</a>
+
+    <header class="cabecalho">
+        <div class="container cabecalho-topo">
+            <a class="logo" href="../index.html">
+                <svg viewBox="0 0 40 40" aria-hidden="true">
+                    <circle cx="20" cy="20" r="18" fill="#D69E2E" />
+                    <path d="M11 21l6 6 12-13" fill="none" stroke="#1A365D" stroke-width="4" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+                <span>Política Acessível</span>
+            </a>
+            <div class="acessibilidade" role="group" aria-label="Ferramentas de acessibilidade">
+                <button type="button" id="aumentar-fonte" aria-label="Aumentar tamanho do texto">A+</button>
+                <button type="button" id="diminuir-fonte" aria-label="Diminuir tamanho do texto">A-</button>
+                <button type="button" id="alto-contraste" aria-pressed="false">🌓 Alto contraste</button>
+            </div>
+        </div>
+        <nav class="menu" aria-label="Menu principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="candidatos.html">Candidatos</a></li>
+                <li><a href="projetos-de-lei.html">Projetos de lei</a></li>
+                <li><a href="glossario.html" aria-current="page">Glossário</a></li>
+                <li><a href="pesquisas.html">Pesquisas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="conteudo" class="container">
+        <h1>Glossário político</h1>
+        <p class="intro">Descomplicando termos como PEC, LDO e quórum. Digite uma palavra para filtrar a lista.</p>
+
+        <label for="busca-termo"><strong>Buscar termo</strong></label><br>
+        <input type="search" id="busca-termo" placeholder="Ex.: veto">
+        <p id="resultado-busca" aria-live="polite">10 termo(s) encontrado(s).</p>
+
+        <!-- <dl> = lista de definições: <dt> é o termo e <dd> é o significado -->
+        <dl>
+            <div class="termo">
+                <dt>PEC (Proposta de Emenda à Constituição)</dt>
+                <dd>Projeto que muda o texto da Constituição. É mais difícil de aprovar: precisa de votação em dois
+                    turnos na Câmara e no Senado, com apoio de três quintos dos parlamentares em cada casa.</dd>
+            </div>
+            <div class="termo">
+                <dt>LDO (Lei de Diretrizes Orçamentárias)</dt>
+                <dd>Define as metas e as prioridades do governo para o orçamento do ano seguinte.</dd>
+            </div>
+            <div class="termo">
+                <dt>LOA (Lei Orçamentária Anual)</dt>
+                <dd>Estima quanto o governo vai arrecadar e fixa quanto pode gastar durante o ano.</dd>
+            </div>
+            <div class="termo">
+                <dt>Quórum</dt>
+                <dd>Número mínimo de parlamentares presentes para uma sessão ou votação ser válida.</dd>
+            </div>
+            <div class="termo">
+                <dt>Emenda</dt>
+                <dd>Sugestão de mudança em um projeto que ainda está sendo discutido.</dd>
+            </div>
+            <div class="termo">
+                <dt>Veto</dt>
+                <dd>Recusa do chefe do Executivo (presidente, governador ou prefeito) a aprovar, no todo ou em parte, um
+                    projeto votado pelo Legislativo. O Legislativo pode derrubar o veto.</dd>
+            </div>
+            <div class="termo">
+                <dt>Sanção</dt>
+                <dd>Aprovação final do chefe do Executivo a um projeto de lei, que então vira lei.</dd>
+            </div>
+            <div class="termo">
+                <dt>Plebiscito</dt>
+                <dd>Consulta feita ao povo antes de uma lei ser criada, para decidir se ela deve existir.</dd>
+            </div>
+            <div class="termo">
+                <dt>Referendo</dt>
+                <dd>Consulta feita ao povo depois de uma lei ser aprovada, para confirmá-la ou rejeitá-la.</dd>
+            </div>
+            <div class="termo">
+                <dt>CPI (Comissão Parlamentar de Inquérito)</dt>
+                <dd>Grupo de parlamentares criado para investigar um fato determinado, por um prazo definido.</dd>
+            </div>
+        </dl>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <div class="rodape-grade">
+                <div>
+                    <h2>Navegação</h2>
+                    <ul>
+                        <li><a href="candidatos.html">Candidatos</a></li>
+                        <li><a href="projetos-de-lei.html">Projetos de lei</a></li>
+                        <li><a href="glossario.html">Glossário</a></li>
+                        <li><a href="pesquisas.html">Pesquisas</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Fontes oficiais</h2>
+                    <ul>
+                        <li><a href="https://www.tse.jus.br" target="_blank" rel="noopener">TSE</a></li>
+                        <li><a href="https://www.camara.leg.br" target="_blank" rel="noopener">Câmara dos Deputados</a>
+                        </li>
+                        <li><a href="https://www.senado.leg.br" target="_blank" rel="noopener">Senado Federal</a></li>
+                        <li><a href="https://portaldatransparencia.gov.br" target="_blank" rel="noopener">Portal da
+                                Transparência</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Neutralidade</h2>
+                    <p>Este site não apoia partidos nem candidatos. Os nomes e dados são fictícios e servem apenas para
+                        estudo.</p>
+                </div>
+            </div>
+            <p class="direitos">© 2026 Política Acessível · Projeto acadêmico de [Seu Nome] · [Faculdade]</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

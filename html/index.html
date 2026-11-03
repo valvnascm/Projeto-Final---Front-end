@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Início – Política Acessível</title>
+    <meta name="description" content="Política brasileira explicada com linguagem simples e acessibilidade.">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <a class="pular" href="#conteudo">Ir para o conteúdo</a>
+
+    <!-- ===== CABEÇALHO (igual em todas as páginas) ===== -->
+    <header class="cabecalho">
+        <div class="container cabecalho-topo">
+            <a class="logo" href="../index.html">
+                <!-- Ícone SVG simples: círculo com um "visto". aria-hidden = leitor de tela ignora -->
+                <svg viewBox="0 0 40 40" aria-hidden="true">
+                    <circle cx="20" cy="20" r="18" fill="#D69E2E" />
+                    <path d="M11 21l6 6 12-13" fill="none" stroke="#1A365D" stroke-width="4" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+                <span>Política Acessível</span>
+            </a>
+            <!-- Widget de acessibilidade (controlado pelo script.js) -->
+            <div class="acessibilidade" role="group" aria-label="Ferramentas de acessibilidade">
+                <button type="button" id="aumentar-fonte" aria-label="Aumentar tamanho do texto">A+</button>
+                <button type="button" id="diminuir-fonte" aria-label="Diminuir tamanho do texto">A-</button>
+                <button type="button" id="alto-contraste" aria-pressed="false">🌓 Alto contraste</button>
+            </div>
+        </div>
+        <nav class="menu" aria-label="Menu principal">
+            <ul>
+                <!-- aria-current="page" marca a página onde a pessoa está -->
+                <li><a href="index.html" aria-current="page">Início</a></li>
+                <li><a href="candidatos.html">Candidatos</a></li>
+                <li><a href="projetos-de-lei.html">Projetos de lei</a></li>
+                <li><a href="glossario.html">Glossário</a></li>
+                <li><a href="pesquisas.html">Pesquisas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <div class="container">
+            <h1>Política sem complicação, para todo mundo.</h1>
+            <p>Aqui você entende candidatos, leis e termos difíceis em linguagem simples e decide com mais segurança.
+            </p>
+            <a class="botao" href="candidatos.html">Conhecer os candidatos</a>
+        </div>
+    </section>
+
+    <main id="conteudo" class="container">
+
+        <!-- ===== ACESSO RÁPIDO: 4 cards-link ===== -->
+        <section aria-labelledby="t-acesso">
+            <h2 id="t-acesso">Acesso rápido</h2>
+            <div class="grade">
+                <a class="card card-acesso" href="candidatos.html">
+                    <strong>Candidatos</strong> Veja quem são e o que propõem.
+                </a>
+                <a class="card card-acesso" href="projetos-de-lei.html">
+                    <strong>Projetos de lei</strong> Texto oficial e explicação na prática.
+                </a>
+                <a class="card card-acesso" href="glossario.html">
+                    <strong>Glossário</strong> PEC, LDO, quórum e outros termos.
+                </a>
+                <a class="card card-acesso" href="pesquisas.html">
+                    <strong>Pesquisas</strong> Dê sua opinião e veja a da comunidade.
+                </a>
+            </div>
+        </section>
+
+        <!-- ===== NOTÍCIAS (exemplos fictícios) ===== -->
+        <section class="secao" aria-labelledby="t-noticias">
+            <h2 id="t-noticias">Notícias recentes</h2>
+            <div class="grade">
+                <article class="card">
+                    <span class="tag">Exemplo</span>
+                    <h3>Como funciona uma votação no Congresso?</h3>
+                    <p>Entenda as etapas, de quando o projeto é apresentado até a sanção.</p>
+                </article>
+                <article class="card">
+                    <span class="tag">Exemplo</span>
+                    <h3>Orçamento público: para onde vai o dinheiro?</h3>
+                    <p>Veja como os governos decidem gastos com saúde, educação e transporte.</p>
+                </article>
+                <article class="card">
+                    <span class="tag">Exemplo</span>
+                    <h3>Como conferir se uma informação é verdadeira</h3>
+                    <p>Dicas simples para checar notícias antes de compartilhar.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===== RESUMO DA PLATAFORMA ===== -->
+        <section class="secao" aria-labelledby="t-resumo">
+            <h2 id="t-resumo">O que é a Política Acessível?</h2>
+            <p class="intro">
+                É um projeto acadêmico que reúne informações políticas em linguagem simples.
+                O site tem ajuste de tamanho de letra, modo de alto contraste e navegação por teclado.
+                Todo o conteúdo é apenas didático, e os dados são fictícios.
+            </p>
+        </section>
+    </main>
+
+    <!-- ===== RODAPÉ (igual em todas as páginas) ===== -->
+    <footer class="rodape">
+        <div class="container">
+            <div class="rodape-grade">
+                <div>
+                    <h2>Navegação</h2>
+                    <ul>
+                        <li><a href="candidatos.html">Candidatos</a></li>
+                        <li><a href="projetos-de-lei.html">Projetos de lei</a></li>
+                        <li><a href="glossario.html">Glossário</a></li>
+                        <li><a href="pesquisas.html">Pesquisas</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Fontes oficiais</h2>
+                    <ul>
+                        <li><a href="https://www.tse.jus.br" target="_blank" rel="noopener">TSE</a></li>
+                        <li><a href="https://www.camara.leg.br" target="_blank" rel="noopener">Câmara dos Deputados</a>
+                        </li>
+                        <li><a href="https://www.senado.leg.br" target="_blank" rel="noopener">Senado Federal</a></li>
+                        <li><a href="https://portaldatransparencia.gov.br" target="_blank" rel="noopener">Portal da
+                                Transparência</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Neutralidade</h2>
+                    <p>Este site não apoia partidos nem candidatos. Os nomes e dados são fictícios e servem apenas para
+                        estudo.</p>
+                </div>
+            </div>
+            <p class="direitos">© 2026 Política Acessível · Projeto acadêmico de [Seu Nome] · [Faculdade]</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

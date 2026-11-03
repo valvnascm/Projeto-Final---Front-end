@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projetos de lei – Política Acessível</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <a class="pular" href="#conteudo">Ir para o conteúdo</a>
+
+    <header class="cabecalho">
+        <div class="container cabecalho-topo">
+            <a class="logo" href="../index.html">
+                <svg viewBox="0 0 40 40" aria-hidden="true">
+                    <circle cx="20" cy="20" r="18" fill="#D69E2E" />
+                    <path d="M11 21l6 6 12-13" fill="none" stroke="#1A365D" stroke-width="4" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+                <span>Política Acessível</span>
+            </a>
+            <div class="acessibilidade" role="group" aria-label="Ferramentas de acessibilidade">
+                <button type="button" id="aumentar-fonte" aria-label="Aumentar tamanho do texto">A+</button>
+                <button type="button" id="diminuir-fonte" aria-label="Diminuir tamanho do texto">A-</button>
+                <button type="button" id="alto-contraste" aria-pressed="false">🌓 Alto contraste</button>
+            </div>
+        </div>
+        <nav class="menu" aria-label="Menu principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="candidatos.html">Candidatos</a></li>
+                <li><a href="projetos-de-lei.html" aria-current="page">Projetos de lei</a></li>
+                <li><a href="glossario.html">Glossário</a></li>
+                <li><a href="pesquisas.html">Pesquisas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="conteudo" class="container">
+        <h1>Projetos de lei</h1>
+        <p class="intro">
+            Projetos <strong>fictícios</strong> para treino. Em cada um, compare o texto jurídico com a explicação em
+            linguagem simples.
+            Para projetos reais, consulte o <a href="https://www.camara.leg.br" target="_blank" rel="noopener">site da
+                Câmara</a>.
+        </p>
+
+        <div class="grade">
+
+            <!-- ===== PROJETO 1 ===== -->
+            <article class="card card-pl">
+                <h2>PL 1234/2026 – Merenda escolar</h2>
+
+                <!-- Botões das abas. data-alvo = id do painel que cada aba mostra -->
+                <div class="abas" role="group" aria-label="Escolha o tipo de texto">
+                    <button type="button" class="aba-btn" data-alvo="oficial-1" aria-selected="true">Texto
+                        oficial</button>
+                    <button type="button" class="aba-btn" data-alvo="pratica-1" aria-selected="false">Na
+                        prática</button>
+                </div>
+
+                <div id="oficial-1" class="aba-painel">
+                    <p>Art. 1º Fica estabelecido que, no mínimo, trinta por cento dos recursos destinados à alimentação
+                        escolar serão aplicados na aquisição de gêneros alimentícios provenientes da agricultura
+                        familiar local.</p>
+                </div>
+                <div id="pratica-1" class="aba-painel" hidden>
+                    <p>Pelo menos 30% do dinheiro gasto com merenda deve ser usado para comprar comida de pequenos
+                        agricultores da própria região.</p>
+                </div>
+
+                <div class="botoes-voto" role="group" aria-label="Sua opinião sobre o PL 1234/2026">
+                    <button type="button" class="botao btn-voto-pl" aria-pressed="false">Apoio</button>
+                    <button type="button" class="botao botao-claro btn-voto-pl" aria-pressed="false">Não apoio</button>
+                </div>
+                <p class="msg-voto" aria-live="polite"></p>
+            </article>
+
+            <!-- ===== PROJETO 2 ===== -->
+            <article class="card card-pl">
+                <h2>PL 2345/2026 – Transporte aos domingos</h2>
+
+                <div class="abas" role="group" aria-label="Escolha o tipo de texto">
+                    <button type="button" class="aba-btn" data-alvo="oficial-2" aria-selected="true">Texto
+                        oficial</button>
+                    <button type="button" class="aba-btn" data-alvo="pratica-2" aria-selected="false">Na
+                        prática</button>
+                </div>
+
+                <div id="oficial-2" class="aba-painel">
+                    <p>Art. 1º É instituída a gratuidade do transporte coletivo municipal urbano aos domingos, mediante
+                        compensação financeira às concessionárias, nos termos do regulamento.</p>
+                </div>
+                <div id="pratica-2" class="aba-painel" hidden>
+                    <p>Aos domingos, ninguém pagaria passagem de ônibus na cidade. A prefeitura pagaria às empresas pelo
+                        serviço.</p>
+                </div>
+
+                <div class="botoes-voto" role="group" aria-label="Sua opinião sobre o PL 2345/2026">
+                    <button type="button" class="botao btn-voto-pl" aria-pressed="false">Apoio</button>
+                    <button type="button" class="botao botao-claro btn-voto-pl" aria-pressed="false">Não apoio</button>
+                </div>
+                <p class="msg-voto" aria-live="polite"></p>
+            </article>
+
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <div class="rodape-grade">
+                <div>
+                    <h2>Navegação</h2>
+                    <ul>
+                        <li><a href="candidatos.html">Candidatos</a></li>
+                        <li><a href="projetos-de-lei.html">Projetos de lei</a></li>
+                        <li><a href="glossario.html">Glossário</a></li>
+                        <li><a href="pesquisas.html">Pesquisas</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Fontes oficiais</h2>
+                    <ul>
+                        <li><a href="https://www.tse.jus.br" target="_blank" rel="noopener">TSE</a></li>
+                        <li><a href="https://www.camara.leg.br" target="_blank" rel="noopener">Câmara dos Deputados</a>
+                        </li>
+                        <li><a href="https://www.senado.leg.br" target="_blank" rel="noopener">Senado Federal</a></li>
+                        <li><a href="https://portaldatransparencia.gov.br" target="_blank" rel="noopener">Portal da
+                                Transparência</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Neutralidade</h2>
+                    <p>Este site não apoia partidos nem candidatos. Os nomes e dados são fictícios e servem apenas para
+                        estudo.</p>
+                </div>
+            </div>
+            <p class="direitos">© 2026 Política Acessível · Projeto acadêmico de [Seu Nome] · [Faculdade]</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

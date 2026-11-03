@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pesquisas – Política Acessível</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <a class="pular" href="#conteudo">Ir para o conteúdo</a>
+
+    <header class="cabecalho">
+        <div class="container cabecalho-topo">
+            <a class="logo" href="../index.html">
+                <svg viewBox="0 0 40 40" aria-hidden="true">
+                    <circle cx="20" cy="20" r="18" fill="#D69E2E" />
+                    <path d="M11 21l6 6 12-13" fill="none" stroke="#1A365D" stroke-width="4" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+                <span>Política Acessível</span>
+            </a>
+            <div class="acessibilidade" role="group" aria-label="Ferramentas de acessibilidade">
+                <button type="button" id="aumentar-fonte" aria-label="Aumentar tamanho do texto">A+</button>
+                <button type="button" id="diminuir-fonte" aria-label="Diminuir tamanho do texto">A-</button>
+                <button type="button" id="alto-contraste" aria-pressed="false">🌓 Alto contraste</button>
+            </div>
+        </div>
+        <nav class="menu" aria-label="Menu principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="candidatos.html">Candidatos</a></li>
+                <li><a href="projetos-de-lei.html">Projetos de lei</a></li>
+                <li><a href="glossario.html">Glossário</a></li>
+                <li><a href="pesquisas.html" aria-current="page">Pesquisas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="conteudo" class="container">
+        <h1>Pesquisas da comunidade</h1>
+        <p class="intro">
+            Vote e veja o resultado. Os votos iniciais são <strong>de exemplo</strong>, e o seu voto vale só
+            enquanto a página estiver aberta, porque este projeto não tem banco de dados.
+        </p>
+
+        <div class="grade">
+
+            <!-- ===== ENQUETE 1 ===== -->
+            <!-- data-resultado = id da área onde as barras aparecem -->
+            <article class="card">
+                <form class="form-enquete" data-resultado="res-verba">
+                    <!-- fieldset + legend agrupam as opções e dão nome ao grupo para leitores de tela -->
+                    <fieldset>
+                        <legend>Qual área deve receber mais verba?</legend>
+                        <label class="opcao"><input type="radio" name="verba" value="saude"> Saúde</label>
+                        <label class="opcao"><input type="radio" name="verba" value="educacao"> Educação</label>
+                        <label class="opcao"><input type="radio" name="verba" value="seguranca"> Segurança</label>
+                        <label class="opcao"><input type="radio" name="verba" value="transporte"> Transporte</label>
+                    </fieldset>
+                    <p class="msg-erro" aria-live="polite"></p>
+                    <button type="submit" class="botao">Votar</button>
+                </form>
+
+                <!-- tabindex="-1" permite o JS enviar o foco para cá depois do voto -->
+                <div id="res-verba" class="resultado" tabindex="-1"
+                    data-votos='{"saude":42,"educacao":35,"seguranca":18,"transporte":12}'>
+                    <h3>Resultado</h3>
+                    <div class="linha-voto" data-opcao="saude"><span>Saúde</span>
+                        <div class="barra" aria-hidden="true">
+                            <div class="barra-cheia"></div>
+                        </div><span class="pct"></span>
+                    </div>
+                    <div class="linha-voto" data-opcao="educacao"><span>Educação</span>
+                        <div class="barra" aria-hidden="true">
+                            <div class="barra-cheia"></div>
+                        </div><span class="pct"></span>
+                    </div>
+                    <div class="linha-voto" data-opcao="seguranca"><span>Segurança</span>
+                        <div class="barra" aria-hidden="true">
+                            <div class="barra-cheia"></div>
+                        </div><span class="pct"></span>
+                    </div>
+                    <div class="linha-voto" data-opcao="transporte"><span>Transporte</span>
+                        <div class="barra" aria-hidden="true">
+                            <div class="barra-cheia"></div>
+                        </div><span class="pct"></span>
+                    </div>
+                    <p class="total"></p>
+                </div>
+            </article>
+
+            <!-- ===== ENQUETE 2 ===== -->
+            <article class="card">
+                <form class="form-enquete" data-resultado="res-acompanha">
+                    <fieldset>
+                        <legend>Você acompanha o trabalho dos seus representantes?</legend>
+                        <label class="opcao"><input type="radio" name="acompanha" value="sempre"> Sim, sempre</label>
+                        <label class="opcao"><input type="radio" name="acompanha" value="as-vezes"> Às vezes</label>
+                        <label class="opcao"><input type="radio" name="acompanha" value="nunca"> Quase nunca</label>
+                    </fieldset>
+                    <p class="msg-erro" aria-live="polite"></p>
+                    <button type="submit" class="botao">Votar</button>
+                </form>
+
+                <div id="res-acompanha" class="resultado" tabindex="-1"
+                    data-votos='{"sempre":20,"as-vezes":45,"nunca":35}'>
+                    <h3>Resultado</h3>
+                    <div class="linha-voto" data-opcao="sempre"><span>Sempre</span>
+                        <div class="barra" aria-hidden="true">
+                            <div class="barra-cheia"></div>
+                        </div><span class="pct"></span>
+                    </div>
+                    <div class="linha-voto" data-opcao="as-vezes"><span>Às vezes</span>
+                        <div class="barra" aria-hidden="true">
+                            <div class="barra-cheia"></div>
+                        </div><span class="pct"></span>
+                    </div>
+                    <div class="linha-voto" data-opcao="nunca"><span>Quase nunca</span>
+                        <div class="barra" aria-hidden="true">
+                            <div class="barra-cheia"></div>
+                        </div><span class="pct"></span>
+                    </div>
+                    <p class="total"></p>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <div class="rodape-grade">
+                <div>
+                    <h2>Navegação</h2>
+                    <ul>
+                        <li><a href="candidatos.html">Candidatos</a></li>
+                        <li><a href="projetos-de-lei.html">Projetos de lei</a></li>
+                        <li><a href="glossario.html">Glossário</a></li>
+                        <li><a href="pesquisas.html">Pesquisas</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Fontes oficiais</h2>
+                    <ul>
+                        <li><a href="https://www.tse.jus.br" target="_blank" rel="noopener">TSE</a></li>
+                        <li><a href="https://www.camara.leg.br" target="_blank" rel="noopener">Câmara dos Deputados</a>
+                        </li>
+                        <li><a href="https://www.senado.leg.br" target="_blank" rel="noopener">Senado Federal</a></li>
+                        <li><a href="https://portaldatransparencia.gov.br" target="_blank" rel="noopener">Portal da
+                                Transparência</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Neutralidade</h2>
+                    <p>Este site não apoia partidos nem candidatos. Os nomes e dados são fictícios e servem apenas para
+                        estudo.</p>
+                </div>
+            </div>
+            <p class="direitos">© 2026 Política Acessível · Projeto acadêmico de [Seu Nome] · [Faculdade]</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
