@@ -5,24 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Candidatos – Política Acessível</title>
+    <meta name="description" content="Política brasileira explicada com linguagem simples e acessibilidade.">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
-    <a class="pular" href="#conteudo">Ir para o conteúdo</a>
+    <a id="pular" href="#conteudo">Ir para o conteúdo</a>
 
-    <header class="cabecalho">
-        <div class="container cabecalho-topo">
-            <a class="logo" href="index.html">
-                <svg viewBox="0 0 40 40" aria-hidden="true">
-                    <circle cx="20" cy="20" r="18" fill="#D69E2E" />
-                    <path d="M11 21l6 6 12-13" fill="none" stroke="#1A365D" stroke-width="4" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                </svg>
-                <span>Política Acessível</span>
-            </a>
-        </div>
-        <nav class="menu" aria-label="Menu principal">
+    <header>
+        <a href="index.html">
+            <svg viewBox="0 0 40 40" aria-hidden="true">
+                <circle cx="20" cy="20" r="18" fill="#D69E2E" />
+                <path d="M11 21l6 6 12-13" fill="none" stroke="#1A365D" stroke-width="4" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+            <span>Política Acessível</span>
+        </a>
+        <nav aria-label="Menu principal">
             <ul>
                 <li><a href="index.html">Início</a></li>
                 <li><a href="candidatos.html" aria-current="page">Candidatos</a></li>
@@ -33,24 +32,20 @@
         </nav>
     </header>
 
-    <main id="conteudo" class="container">
+    <main id="conteudo">
         <h1>Candidatos</h1>
-        <p class="intro">
-            Todos os candidatos abaixo são <strong>fictícios</strong> e aparecem no mesmo formato, para comparação
-            justa.
-            Para dados reais, consulte o <a href="https://divulgacandcontas.tse.jus.br" target="_blank"
-                rel="noopener">DivulgaCandContas do TSE</a>.
-        </p>
+        <aside>
+            <p>Todos os candidatos abaixo são <strong>fictícios</strong> e aparecem no mesmo formato, para comparação
+                justa. Para dados reais, consulte o <a href="https://divulgacandcontas.tse.jus.br" target="_blank"
+                    rel="noopener">DivulgaCandContas do TSE</a>.</p>
+        </aside>
 
-        <div class="grade">
-
-            <article class="card card-candidato">
-                <div class="foto" aria-hidden="true">HD</div>
-                <h2>Helena Duarte</h2>
-                <span class="tag">Governo do estado</span><span class="tag">Partido Exemplo A</span><span class="tag">Nº
-                    11</span>
-
-                <!-- details/summary: o próprio HTML abre e fecha, sem JavaScript -->
+        <section>
+            <h2>Governo do estado e Senado</h2>
+            <article>
+                <figure role="img" aria-label="Foto de Helena Duarte">HD</figure>
+                <h3>Helena Duarte</h3>
+                <small>Governo do estado</small><small>Partido Exemplo A</small><small>Nº 11</small>
                 <details>
                     <summary>Ver 3 propostas principais</summary>
                     <ol>
@@ -60,13 +55,10 @@
                     </ol>
                 </details>
             </article>
-
-            <article class="card card-candidato">
-                <div class="foto" aria-hidden="true">CM</div>
-                <h2>Carlos Menezes</h2>
-                <span class="tag">Governo do estado</span><span class="tag">Partido Exemplo B</span><span class="tag">Nº
-                    22</span>
-                <!-- details/summary: o próprio HTML abre e fecha, sem JavaScript -->
+            <article>
+                <figure role="img" aria-label="Foto de Carlos Menezes">CM</figure>
+                <h3>Carlos Menezes</h3>
+                <small>Governo do estado</small><small>Partido Exemplo B</small><small>Nº 22</small>
                 <details>
                     <summary>Ver 3 propostas principais</summary>
                     <ol>
@@ -76,12 +68,10 @@
                     </ol>
                 </details>
             </article>
-
-            <article class="card card-candidato">
-                <div class="foto" aria-hidden="true">AT</div>
-                <h2>Ana Beatriz Torres</h2>
-                <span class="tag">Senado</span><span class="tag">Partido Exemplo C</span><span class="tag">Nº 333</span>
-                <!-- details/summary: o próprio HTML abre e fecha, sem JavaScript -->
+            <article>
+                <figure role="img" aria-label="Foto de Ana Beatriz Torres">AT</figure>
+                <h3>Ana Beatriz Torres</h3>
+                <small>Senado</small><small>Partido Exemplo C</small><small>Nº 333</small>
                 <details>
                     <summary>Ver 3 propostas principais</summary>
                     <ol>
@@ -91,12 +81,10 @@
                     </ol>
                 </details>
             </article>
-
-            <article class="card card-candidato">
-                <div class="foto" aria-hidden="true">RN</div>
-                <h2>Roberto Nogueira</h2>
-                <span class="tag">Senado</span><span class="tag">Partido Exemplo A</span><span class="tag">Nº 111</span>
-                <!-- details/summary: o próprio HTML abre e fecha, sem JavaScript -->
+            <article>
+                <figure role="img" aria-label="Foto de Roberto Nogueira">RN</figure>
+                <h3>Roberto Nogueira</h3>
+                <small>Senado</small><small>Partido Exemplo A</small><small>Nº 111</small>
                 <details>
                     <summary>Ver 3 propostas principais</summary>
                     <ol>
@@ -106,43 +94,36 @@
                     </ol>
                 </details>
             </article>
-
-        </div>
+        </section>
     </main>
 
-    <footer class="rodape">
-        <div class="container">
-            <div class="rodape-grade">
-                <div>
-                    <h2>Navegação</h2>
-                    <ul>
-                        <li><a href="candidatos.html">Candidatos</a></li>
-                        <li><a href="projetos-de-lei.html">Projetos de lei</a></li>
-                        <li><a href="glossario.html">Glossário</a></li>
-                        <li><a href="pesquisas.html">Pesquisas</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h2>Fontes oficiais</h2>
-                    <ul>
-                        <li><a href="https://www.tse.jus.br" target="_blank" rel="noopener">TSE</a></li>
-                        <li><a href="https://www.camara.leg.br" target="_blank" rel="noopener">Câmara dos Deputados</a>
-                        </li>
-                        <li><a href="https://www.senado.leg.br" target="_blank" rel="noopener">Senado Federal</a></li>
-                        <li><a href="https://portaldatransparencia.gov.br" target="_blank" rel="noopener">Portal da
-                                Transparência</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h2>Neutralidade</h2>
-                    <p>Este site não apoia partidos nem candidatos. Os nomes e dados são fictícios e servem apenas para
-                        estudo.</p>
-                </div>
-            </div>
-            <p class="direitos">© 2026 Política Acessível · Projeto acadêmico de [Seu Nome] · [Faculdade]</p>
-        </div>
+    <footer>
+        <nav aria-label="Navegação do rodapé">
+            <h2>Navegação</h2>
+            <ul>
+                <li><a href="candidatos.html">Candidatos</a></li>
+                <li><a href="projetos-de-lei.html">Projetos de lei</a></li>
+                <li><a href="glossario.html">Glossário</a></li>
+                <li><a href="pesquisas.html">Pesquisas</a></li>
+            </ul>
+        </nav>
+        <section>
+            <h2>Fontes oficiais</h2>
+            <ul>
+                <li><a href="https://www.tse.jus.br" target="_blank" rel="noopener">TSE</a></li>
+                <li><a href="https://www.camara.leg.br" target="_blank" rel="noopener">Câmara dos Deputados</a></li>
+                <li><a href="https://www.senado.leg.br" target="_blank" rel="noopener">Senado Federal</a></li>
+                <li><a href="https://portaldatransparencia.gov.br" target="_blank" rel="noopener">Portal da
+                        Transparência</a></li>
+            </ul>
+        </section>
+        <aside>
+            <h2>Neutralidade</h2>
+            <p>Este site não apoia partidos nem candidatos. Os nomes e dados são fictícios e servem apenas para estudo.
+            </p>
+        </aside>
+        <p>© 2026 Política Acessível · Projeto acadêmico de [Seu Nome] · [Faculdade]</p>
     </footer>
-
 </body>
 
 </html>

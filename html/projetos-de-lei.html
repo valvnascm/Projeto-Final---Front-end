@@ -5,24 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Projetos de lei – Política Acessível</title>
+    <meta name="description" content="Política brasileira explicada com linguagem simples e acessibilidade.">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
-    <a class="pular" href="#conteudo">Ir para o conteúdo</a>
+    <a id="pular" href="#conteudo">Ir para o conteúdo</a>
 
-    <header class="cabecalho">
-        <div class="container cabecalho-topo">
-            <a class="logo" href="index.html">
-                <svg viewBox="0 0 40 40" aria-hidden="true">
-                    <circle cx="20" cy="20" r="18" fill="#D69E2E" />
-                    <path d="M11 21l6 6 12-13" fill="none" stroke="#1A365D" stroke-width="4" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                </svg>
-                <span>Política Acessível</span>
-            </a>
-        </div>
-        <nav class="menu" aria-label="Menu principal">
+    <header>
+        <a href="index.html">
+            <svg viewBox="0 0 40 40" aria-hidden="true">
+                <circle cx="20" cy="20" r="18" fill="#D69E2E" />
+                <path d="M11 21l6 6 12-13" fill="none" stroke="#1A365D" stroke-width="4" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+            <span>Política Acessível</span>
+        </a>
+        <nav aria-label="Menu principal">
             <ul>
                 <li><a href="index.html">Início</a></li>
                 <li><a href="candidatos.html">Candidatos</a></li>
@@ -33,70 +32,65 @@
         </nav>
     </header>
 
-    <main id="conteudo" class="container">
+    <main id="conteudo">
         <h1>Projetos de lei</h1>
-        <p class="intro">
-            Projetos <strong>fictícios</strong> para treino. Em cada um, compare o texto jurídico com a explicação em
-            linguagem simples. Para projetos reais, consulte o
-            <a href="https://www.camara.leg.br" target="_blank" rel="noopener">site da Câmara</a>.
-        </p>
-        <div class="grade">
-            <article class="card">
-                <h2>PL 1234/2026 – Merenda escolar</h2>
-                <h3>Texto oficial</h3>
-                <p class="bloco">Art. 1º Fica estabelecido que, no mínimo, trinta por cento dos recursos destinados à
-                    alimentação escolar serão aplicados na aquisição de gêneros alimentícios provenientes da agricultura
-                    familiar local.</p>
-                <h3>Na prática</h3>
-                <p class="bloco">Pelo menos 30% do dinheiro gasto com merenda deve ser usado para comprar comida de
-                    pequenos agricultores da própria região.</p>
-            </article>
+        <aside>
+            <p>Projetos <strong>fictícios</strong> para treino. Em cada um, compare o texto jurídico com a explicação em
+                linguagem simples. Para projetos reais, consulte o <a href="https://www.camara.leg.br" target="_blank"
+                    rel="noopener">site da Câmara</a>.</p>
+        </aside>
 
-            <article class="card">
-                <h2>PL 2345/2026 – Transporte aos domingos</h2>
-                <h3>Texto oficial</h3>
-                <p class="bloco">Art. 1º É instituída a gratuidade do transporte coletivo municipal urbano aos domingos,
-                    mediante compensação financeira às concessionárias, nos termos do regulamento.</p>
-                <h3>Na prática</h3>
-                <p class="bloco">Aos domingos, ninguém pagaria passagem de ônibus na cidade. A prefeitura pagaria às
-                    empresas pelo serviço.</p>
+        <section>
+            <h2>Projetos em análise</h2>
+            <article>
+                <h3>PL 1234/2026 – Merenda escolar</h3>
+                <h4>Texto oficial</h4>
+                <blockquote>Art. 1º Fica estabelecido que, no mínimo, trinta por cento dos recursos destinados à
+                    alimentação escolar serão aplicados na aquisição de gêneros alimentícios provenientes da agricultura
+                    familiar local.</blockquote>
+                <h4>Na prática</h4>
+                <p>Pelo menos 30% do dinheiro gasto com merenda deve ser usado para comprar comida de pequenos
+                    agricultores da própria região.</p>
             </article>
-        </div>
+            <article>
+                <h3>PL 2345/2026 – Transporte aos domingos</h3>
+                <h4>Texto oficial</h4>
+                <blockquote>Art. 1º É instituída a gratuidade do transporte coletivo municipal urbano aos domingos,
+                    mediante compensação financeira às concessionárias, nos termos do regulamento.</blockquote>
+                <h4>Na prática</h4>
+                <p>Aos domingos, ninguém pagaria passagem de ônibus na cidade. A prefeitura pagaria às empresas pelo
+                    serviço.</p>
+            </article>
+        </section>
     </main>
 
-    <footer class="rodape">
-        <div class="container">
-            <div class="rodape-grade">
-                <div>
-                    <h2>Navegação</h2>
-                    <ul>
-                        <li><a href="candidatos.html">Candidatos</a></li>
-                        <li><a href="projetos-de-lei.html">Projetos de lei</a></li>
-                        <li><a href="glossario.html">Glossário</a></li>
-                        <li><a href="pesquisas.html">Pesquisas</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h2>Fontes oficiais</h2>
-                    <ul>
-                        <li><a href="https://www.tse.jus.br" target="_blank" rel="noopener">TSE</a></li>
-                        <li><a href="https://www.camara.leg.br" target="_blank" rel="noopener">Câmara dos Deputados</a>
-                        </li>
-                        <li><a href="https://www.senado.leg.br" target="_blank" rel="noopener">Senado Federal</a></li>
-                        <li><a href="https://portaldatransparencia.gov.br" target="_blank" rel="noopener">Portal da
-                                Transparência</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h2>Neutralidade</h2>
-                    <p>Este site não apoia partidos nem candidatos. Os nomes e dados são fictícios e servem apenas para
-                        estudo.</p>
-                </div>
-            </div>
-            <p class="direitos">© 2026 Política Acessível · Projeto acadêmico de [Seu Nome] · [Faculdade]</p>
-        </div>
+    <footer>
+        <nav aria-label="Navegação do rodapé">
+            <h2>Navegação</h2>
+            <ul>
+                <li><a href="candidatos.html">Candidatos</a></li>
+                <li><a href="projetos-de-lei.html">Projetos de lei</a></li>
+                <li><a href="glossario.html">Glossário</a></li>
+                <li><a href="pesquisas.html">Pesquisas</a></li>
+            </ul>
+        </nav>
+        <section>
+            <h2>Fontes oficiais</h2>
+            <ul>
+                <li><a href="https://www.tse.jus.br" target="_blank" rel="noopener">TSE</a></li>
+                <li><a href="https://www.camara.leg.br" target="_blank" rel="noopener">Câmara dos Deputados</a></li>
+                <li><a href="https://www.senado.leg.br" target="_blank" rel="noopener">Senado Federal</a></li>
+                <li><a href="https://portaldatransparencia.gov.br" target="_blank" rel="noopener">Portal da
+                        Transparência</a></li>
+            </ul>
+        </section>
+        <aside>
+            <h2>Neutralidade</h2>
+            <p>Este site não apoia partidos nem candidatos. Os nomes e dados são fictícios e servem apenas para estudo.
+            </p>
+        </aside>
+        <p>© 2026 Política Acessível · Projeto acadêmico de [Seu Nome] · [Faculdade]</p>
     </footer>
-
 </body>
 
 </html>

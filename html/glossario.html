@@ -5,24 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Glossário – Política Acessível</title>
+    <meta name="description" content="Política brasileira explicada com linguagem simples e acessibilidade.">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
-    <a class="pular" href="#conteudo">Ir para o conteúdo</a>
+    <a id="pular" href="#conteudo">Ir para o conteúdo</a>
 
-    <header class="cabecalho">
-        <div class="container cabecalho-topo">
-            <a class="logo" href="index.html">
-                <svg viewBox="0 0 40 40" aria-hidden="true">
-                    <circle cx="20" cy="20" r="18" fill="#D69E2E" />
-                    <path d="M11 21l6 6 12-13" fill="none" stroke="#1A365D" stroke-width="4" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                </svg>
-                <span>Política Acessível</span>
-            </a>
-        </div>
-        <nav class="menu" aria-label="Menu principal">
+    <header>
+        <a href="index.html">
+            <svg viewBox="0 0 40 40" aria-hidden="true">
+                <circle cx="20" cy="20" r="18" fill="#D69E2E" />
+                <path d="M11 21l6 6 12-13" fill="none" stroke="#1A365D" stroke-width="4" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+            <span>Política Acessível</span>
+        </a>
+        <nav aria-label="Menu principal">
             <ul>
                 <li><a href="index.html">Início</a></li>
                 <li><a href="candidatos.html">Candidatos</a></li>
@@ -33,91 +32,85 @@
         </nav>
     </header>
 
-    <main id="conteudo" class="container">
+    <main id="conteudo">
         <h1>Glossário político</h1>
-        <p class="intro">Descomplicando termos como PEC, LDO e quórum. Dica: use Ctrl+F para achar um termo rapidamente.
-        </p>
+        <aside>
+            <p>Descomplicando termos como PEC, LDO e quórum. Dica: use Ctrl+F para achar um termo rapidamente.</p>
+        </aside>
 
-        <!-- <dl> = lista de definições: <dt> é o termo e <dd> é o significado -->
         <dl>
-            <div class="termo">
+            <div>
                 <dt>PEC (Proposta de Emenda à Constituição)</dt>
                 <dd>Projeto que muda o texto da Constituição. É mais difícil de aprovar: precisa de votação em dois
                     turnos na Câmara e no Senado, com apoio de três quintos dos parlamentares em cada casa.</dd>
             </div>
-            <div class="termo">
+            <div>
                 <dt>LDO (Lei de Diretrizes Orçamentárias)</dt>
                 <dd>Define as metas e as prioridades do governo para o orçamento do ano seguinte.</dd>
             </div>
-            <div class="termo">
+            <div>
                 <dt>LOA (Lei Orçamentária Anual)</dt>
                 <dd>Estima quanto o governo vai arrecadar e fixa quanto pode gastar durante o ano.</dd>
             </div>
-            <div class="termo">
+            <div>
                 <dt>Quórum</dt>
                 <dd>Número mínimo de parlamentares presentes para uma sessão ou votação ser válida.</dd>
             </div>
-            <div class="termo">
+            <div>
                 <dt>Emenda</dt>
                 <dd>Sugestão de mudança em um projeto que ainda está sendo discutido.</dd>
             </div>
-            <div class="termo">
+            <div>
                 <dt>Veto</dt>
                 <dd>Recusa do chefe do Executivo (presidente, governador ou prefeito) a aprovar, no todo ou em parte, um
                     projeto votado pelo Legislativo. O Legislativo pode derrubar o veto.</dd>
             </div>
-            <div class="termo">
+            <div>
                 <dt>Sanção</dt>
                 <dd>Aprovação final do chefe do Executivo a um projeto de lei, que então vira lei.</dd>
             </div>
-            <div class="termo">
+            <div>
                 <dt>Plebiscito</dt>
                 <dd>Consulta feita ao povo antes de uma lei ser criada, para decidir se ela deve existir.</dd>
             </div>
-            <div class="termo">
+            <div>
                 <dt>Referendo</dt>
                 <dd>Consulta feita ao povo depois de uma lei ser aprovada, para confirmá-la ou rejeitá-la.</dd>
             </div>
-            <div class="termo">
+            <div>
                 <dt>CPI (Comissão Parlamentar de Inquérito)</dt>
                 <dd>Grupo de parlamentares criado para investigar um fato determinado, por um prazo definido.</dd>
             </div>
         </dl>
     </main>
 
-    <footer class="rodape">
-        <div class="container">
-            <div class="rodape-grade">
-                <div>
-                    <h2>Navegação</h2>
-                    <ul>
-                        <li><a href="candidatos.html">Candidatos</a></li>
-                        <li><a href="projetos-de-lei.html">Projetos de lei</a></li>
-                        <li><a href="glossario.html">Glossário</a></li>
-                        <li><a href="pesquisas.html">Pesquisas</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h2>Fontes oficiais</h2>
-                    <ul>
-                        <li><a href="https://www.tse.jus.br" target="_blank" rel="noopener">TSE</a></li>
-                        <li><a href="https://www.camara.leg.br" target="_blank" rel="noopener">Câmara dos Deputados</a>
-                        </li>
-                        <li><a href="https://www.senado.leg.br" target="_blank" rel="noopener">Senado Federal</a></li>
-                        <li><a href="https://portaldatransparencia.gov.br" target="_blank" rel="noopener">Portal da
-                                Transparência</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h2>Neutralidade</h2>
-                    <p>Este site não apoia partidos nem candidatos. Os nomes e dados são fictícios e servem apenas para
-                        estudo.</p>
-                </div>
-            </div>
-            <p class="direitos">© 2026 Política Acessível · Projeto acadêmico de [Seu Nome] · [Faculdade]</p>
-        </div>
+    <footer>
+        <nav aria-label="Navegação do rodapé">
+            <h2>Navegação</h2>
+            <ul>
+                <li><a href="candidatos.html">Candidatos</a></li>
+                <li><a href="projetos-de-lei.html">Projetos de lei</a></li>
+                <li><a href="glossario.html">Glossário</a></li>
+                <li><a href="pesquisas.html">Pesquisas</a></li>
+            </ul>
+        </nav>
+        <section>
+            <h2>Fontes oficiais</h2>
+            <ul>
+                <li><a href="https://www.tse.jus.br" target="_blank" rel="noopener">TSE</a></li>
+                <li><a href="https://www.camara.leg.br" target="_blank" rel="noopener">Câmara dos Deputados</a></li>
+                <li><a href="https://www.senado.leg.br" target="_blank" rel="noopener">Senado Federal</a></li>
+                <li><a href="https://portaldatransparencia.gov.br" target="_blank" rel="noopener">Portal da
+                        Transparência</a></li>
+            </ul>
+        </section>
+        <aside>
+            <h2>Neutralidade</h2>
+            <p>Este site não apoia partidos nem candidatos. Os nomes e dados são fictícios e servem apenas para estudo.
+            </p>
+        </aside>
+        <p>© 2026 Política Acessível · Projeto acadêmico de [Seu Nome] · [Faculdade]</p>
     </footer>
-
 </body>
 
 </html>
