@@ -13,7 +13,7 @@
 
     <header class="cabecalho">
         <div class="container cabecalho-topo">
-            <a class="logo" href="../index.html">
+            <a class="logo" href="index.html">
                 <svg viewBox="0 0 40 40" aria-hidden="true">
                     <circle cx="20" cy="20" r="18" fill="#D69E2E" />
                     <path d="M11 21l6 6 12-13" fill="none" stroke="#1A365D" stroke-width="4" stroke-linecap="round"
@@ -21,11 +21,6 @@
                 </svg>
                 <span>Política Acessível</span>
             </a>
-            <div class="acessibilidade" role="group" aria-label="Ferramentas de acessibilidade">
-                <button type="button" id="aumentar-fonte" aria-label="Aumentar tamanho do texto">A+</button>
-                <button type="button" id="diminuir-fonte" aria-label="Diminuir tamanho do texto">A-</button>
-                <button type="button" id="alto-contraste" aria-pressed="false">🌓 Alto contraste</button>
-            </div>
         </div>
         <nav class="menu" aria-label="Menu principal">
             <ul>
@@ -47,97 +42,69 @@
                 rel="noopener">DivulgaCandContas do TSE</a>.
         </p>
 
-        <!-- ===== FILTROS ===== -->
-        <div class="filtros">
-            <div>
-                <label for="filtro-cargo">Cargo</label>
-                <select id="filtro-cargo">
-                    <option value="todos">Todos</option>
-                    <option value="governo">Governo do estado</option>
-                    <option value="senado">Senado</option>
-                </select>
-            </div>
-            <div>
-                <label for="filtro-partido">Partido</label>
-                <select id="filtro-partido">
-                    <option value="todos">Todos</option>
-                    <option value="a">Partido Exemplo A</option>
-                    <option value="b">Partido Exemplo B</option>
-                    <option value="c">Partido Exemplo C</option>
-                </select>
-            </div>
-        </div>
-        <!-- aria-live: leitores de tela leem a mensagem quando ela muda -->
-        <p id="contagem" aria-live="polite">4 candidato(s) encontrado(s).</p>
-
-
         <div class="grade">
 
-            <article class="card card-candidato" data-cargo="governo" data-partido="a">
+            <article class="card card-candidato">
                 <div class="foto" aria-hidden="true">HD</div>
                 <h2>Helena Duarte</h2>
                 <span class="tag">Governo do estado</span><span class="tag">Partido Exemplo A</span><span class="tag">Nº
                     11</span>
 
-                <button type="button" class="acordeao-botao" aria-expanded="false" aria-controls="prop-1">
-                    Ver 3 propostas principais
-                </button>
-                <div id="prop-1" class="acordeao-painel" hidden>
+                <!-- details/summary: o próprio HTML abre e fecha, sem JavaScript -->
+                <details>
+                    <summary>Ver 3 propostas principais</summary>
                     <ol>
                         <li>Escola em tempo integral.</li>
                         <li>Mais postos de saúde com atendimento noturno.</li>
                         <li>Reforço escolar com tutoria.</li>
                     </ol>
-                </div>
+                </details>
             </article>
 
-            <article class="card card-candidato" data-cargo="governo" data-partido="b">
+            <article class="card card-candidato">
                 <div class="foto" aria-hidden="true">CM</div>
                 <h2>Carlos Menezes</h2>
                 <span class="tag">Governo do estado</span><span class="tag">Partido Exemplo B</span><span class="tag">Nº
                     22</span>
-                <button type="button" class="acordeao-botao" aria-expanded="false" aria-controls="prop-2">
-                    Ver 3 propostas principais
-                </button>
-                <div id="prop-2" class="acordeao-painel" hidden>
+                <!-- details/summary: o próprio HTML abre e fecha, sem JavaScript -->
+                <details>
+                    <summary>Ver 3 propostas principais</summary>
                     <ol>
                         <li>Crédito facilitado para pequenos negócios.</li>
                         <li>Abertura de empresas em até 48 horas.</li>
                         <li>Cursos técnicos ligados às vagas da região.</li>
                     </ol>
-                </div>
+                </details>
             </article>
 
-            <article class="card card-candidato" data-cargo="senado" data-partido="c">
+            <article class="card card-candidato">
                 <div class="foto" aria-hidden="true">AT</div>
                 <h2>Ana Beatriz Torres</h2>
                 <span class="tag">Senado</span><span class="tag">Partido Exemplo C</span><span class="tag">Nº 333</span>
-                <button type="button" class="acordeao-botao" aria-expanded="false" aria-controls="prop-3">
-                    Ver 3 propostas principais
-                </button>
-                <div id="prop-3" class="acordeao-painel" hidden>
+                <!-- details/summary: o próprio HTML abre e fecha, sem JavaScript -->
+                <details>
+                    <summary>Ver 3 propostas principais</summary>
                     <ol>
                         <li>Incentivo a energia limpa nos municípios.</li>
                         <li>Meta nacional de saneamento básico.</li>
                         <li>Transporte público mais barato para estudantes.</li>
                     </ol>
-                </div>
+                </details>
             </article>
 
-            <article class="card card-candidato" data-cargo="senado" data-partido="a">
+            <article class="card card-candidato">
                 <div class="foto" aria-hidden="true">RN</div>
                 <h2>Roberto Nogueira</h2>
                 <span class="tag">Senado</span><span class="tag">Partido Exemplo A</span><span class="tag">Nº 111</span>
-                <button type="button" class="acordeao-botao" aria-expanded="false" aria-controls="prop-4">
-                    Ver 3 propostas principais
-                </button>
-                <div id="prop-4" class="acordeao-painel" hidden>
+                <!-- details/summary: o próprio HTML abre e fecha, sem JavaScript -->
+                <details>
+                    <summary>Ver 3 propostas principais</summary>
                     <ol>
                         <li>Mais transparência nos gastos do Congresso.</li>
                         <li>Apoio a pequenos produtores rurais.</li>
                         <li>Internet de qualidade em escolas do interior.</li>
                     </ol>
-                </div>
+                </details>
             </article>
 
         </div>

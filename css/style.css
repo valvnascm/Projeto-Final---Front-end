@@ -1,254 +1,373 @@
 /* =========================================================
-   1. VARIÁVEIS (design system)
-   Use var(--nome) em qualquer lugar. Mudou aqui, mudou no site todo.
+   1. VARIÁVEIS DE COR
+   Guardamos as cores com um nome. Para mudar uma cor do site
+   todo, basta mudar aqui. Para usar: var(--azul)
    ========================================================= */
 :root {
-  --cor-primaria: #1A365D;    /* azul institucional */
-  --cor-secundaria: #2F855A;  /* verde cívico */
-  --cor-destaque: #D69E2E;    /* amarelo suave */
-  --cor-fundo: #F7FAFC;
-  --cor-texto: #2D3748;
-  --fonte-principal: 'Inter', 'Roboto', sans-serif;
-
-  /* Variáveis extras, para o alto contraste conseguir trocar as cores */
-  --cor-card: #FFFFFF;
-  --cor-borda: #CBD5E0;
-  --cor-titulo: #1A365D;
-  --cor-link: #1A365D;
-  --cor-barra-topo: #1A365D;  /* fundo do cabeçalho e do rodapé */
-  --cor-sobre-barra: #FFFFFF; /* texto sobre o cabeçalho/rodapé */
-  --cor-botao: #2F855A;       /* fundo dos botões principais */
-  --cor-sobre-botao: #FFFFFF; /* texto dos botões principais */
+  --azul: #1A365D;
+  --verde: #2F855A;
+  --amarelo: #D69E2E;
+  --fundo: #F7FAFC;
+  --texto: #2D3748;
+  --branco: #FFFFFF;
+  --borda: #CBD5E0;
 }
 
 /* =========================================================
-   2. ALTO CONTRASTE
-   Quando o JS coloca a classe "alto-contraste" no <body>,
-   as variáveis abaixo substituem as de cima.
+   2. BASE (vale para a página toda)
    ========================================================= */
-.alto-contraste {
-  --cor-fundo: #000000;
-  --cor-texto: #FFFFFF;
-  --cor-card: #000000;
-  --cor-borda: #FFFFFF;
-  --cor-titulo: #FFEB3B;
-  --cor-link: #FFEB3B;
-  --cor-barra-topo: #000000;
-  --cor-sobre-barra: #FFFFFF;
-  --cor-botao: #FFEB3B;
-  --cor-sobre-botao: #000000;
-  --cor-destaque: #FFEB3B;
+/* box-sizing: o padding e a borda entram na largura da caixa */
+* {
+  box-sizing: border-box;
 }
-
-/* =========================================================
-   3. RESET E BASE
-   rem = relativo ao tamanho da fonte do <html>.
-   Por isso os botões A+ e A- conseguem aumentar o site todo.
-   ========================================================= */
-* { box-sizing: border-box; }
 
 body {
   margin: 0;
-  font-family: var(--fonte-principal);
-  font-size: 1rem;
+  /* tira a margem padrão do navegador */
+  font-family: Inter, Roboto, sans-serif;
+  /* fonte legível */
+  font-size: 1.1rem;
+  /* letra um pouco grande */
   line-height: 1.6;
-  color: var(--cor-texto);
-  background: var(--cor-fundo);
+  /* espaço entre as linhas */
+  color: var(--texto);
+  background: var(--fundo);
 }
 
-h1, h2, h3 { color: var(--cor-titulo); line-height: 1.25; }
-a { color: var(--cor-link); }
-img, svg { max-width: 100%; }
+h1,
+h2,
+h3 {
+  color: var(--azul);
+  line-height: 1.25;
+}
 
-/* Centraliza e limita a largura do conteúdo */
-.container { max-width: 1100px; margin: 0 auto; padding: 0 1.25rem; }
-main { padding: 2rem 0 3rem; }
+a {
+  color: var(--azul);
+}
+
+/* .container centraliza o conteúdo e limita a largura */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  /* "auto" nas laterais = centralizado */
+  padding: 0 1.25rem;
+}
+
+main {
+  padding: 2rem 0 3rem;
+}
 
 /* =========================================================
-   4. ACESSIBILIDADE
+   3. ACESSIBILIDADE
    ========================================================= */
-/* Foco visível para quem usa o teclado (tecla Tab) */
-:focus-visible { outline: 3px solid var(--cor-destaque); outline-offset: 3px; }
+/* Contorno amarelo em quem recebe foco do teclado (tecla Tab) */
+:focus-visible {
+  outline: 3px solid var(--amarelo);
+  outline-offset: 3px;
+}
 
-/* "Ir para o conteúdo": escondido até receber foco */
+/* Link "Ir para o conteúdo": fica fora da tela até receber foco */
 .pular {
-  position: absolute; left: 1rem; top: -4rem; z-index: 10;
-  background: #FFFFFF; color: #000000; padding: 0.6rem 1rem; border-radius: 6px;
-}
-.pular:focus { top: 1rem; }
-
-/* Texto só para leitores de tela */
-.so-leitor {
-  position: absolute; width: 1px; height: 1px; overflow: hidden;
-  clip: rect(0 0 0 0); white-space: nowrap;
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  background: var(--branco);
+  color: #000;
+  padding: 0.6rem 1rem;
 }
 
-/* Respeita quem prefere menos animação */
-@media (prefers-reduced-motion: reduce) {
-  * { transition: none !important; }
+.pular:focus {
+  top: 1rem;
 }
 
 /* =========================================================
-   5. CABEÇALHO, MENU E WIDGET DE ACESSIBILIDADE
+   4. CABEÇALHO E MENU
    ========================================================= */
 .cabecalho {
-  background: var(--cor-barra-topo);
-  color: var(--cor-sobre-barra);
-  border-bottom: 5px solid var(--cor-destaque);
+  background: var(--azul);
+  border-bottom: 5px solid var(--amarelo);
 }
-.cabecalho-topo {
-  display: flex; flex-wrap: wrap;             /* quebra linha no celular */
-  justify-content: space-between; align-items: center;
-  gap: 1rem; padding-top: 1rem; padding-bottom: 1rem;
-}
-.logo {
-  display: flex; align-items: center; gap: 0.6rem;
-  color: var(--cor-sobre-barra); text-decoration: none;
-  font-size: 1.4rem; font-weight: 700;
-}
-.logo svg { width: 2.4rem; height: 2.4rem; }
 
-.acessibilidade { display: flex; gap: 0.5rem; }
-.acessibilidade button {
-  font: inherit; font-weight: 600; cursor: pointer;
-  padding: 0.4rem 0.8rem; border-radius: 6px;
-  border: 2px solid var(--cor-sobre-barra);
-  background: transparent; color: var(--cor-sobre-barra);
+.cabecalho-topo {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
 }
-.acessibilidade button:hover,
-.acessibilidade button[aria-pressed="true"] {
-  background: var(--cor-sobre-barra); color: var(--cor-barra-topo);
+
+.logo {
+  display: flex;
+  /* coloca ícone e texto lado a lado */
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--branco);
+  text-decoration: none;
+  /* tira o sublinhado */
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.logo svg {
+  width: 2.4rem;
+  height: 2.4rem;
 }
 
 .menu ul {
-  list-style: none; margin: 0; padding: 0 1.25rem 0.75rem;
-  max-width: 1100px; margin-inline: auto;
-  display: flex; flex-wrap: wrap; gap: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  /* no celular, o menu quebra de linha */
+  gap: 0.5rem;
+  list-style: none;
+  /* tira as bolinhas da lista */
+  margin: 0 auto;
+  padding: 0 1.25rem 0.75rem;
+  max-width: 1100px;
 }
+
 .menu a {
-  display: block; padding: 0.5rem 1rem; border-radius: 6px;
-  color: var(--cor-sobre-barra); text-decoration: none; font-weight: 600;
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
 }
-.menu a:hover { background: rgba(255, 255, 255, 0.18); }
-/* Página atual (marcada com aria-current="page" no HTML) */
-.menu a[aria-current="page"] { background: var(--cor-destaque); color: #000000; }
+
+.menu a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* A página atual (marcada com aria-current="page" no HTML) fica amarela */
+.menu a[aria-current="page"] {
+  background: var(--amarelo);
+  color: #000;
+}
 
 /* =========================================================
-   6. COMPONENTES REUTILIZÁVEIS
+   5. PÁGINA INICIAL
    ========================================================= */
-/* GRID: colunas automáticas, mínimo de 250px cada */
-.grade { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.25rem; }
+.hero {
+  background: var(--branco);
+  border-bottom: 2px solid var(--borda);
+  padding: 3rem 0;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  margin-top: 0;
+}
+
+.hero p {
+  max-width: 60ch;
+  font-size: 1.2rem;
+}
+
+.secao {
+  margin-top: 3rem;
+}
+
+.intro {
+  max-width: 65ch;
+}
+
+/* =========================================================
+   6. GRADE E CARDS (usados em todas as páginas)
+   ========================================================= */
+/* Grid: cria colunas. auto-fit + minmax = quantas colunas couberem,
+   cada uma com pelo menos 250px. No celular vira 1 coluna sozinho. */
+.grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.25rem;
+}
 
 .card {
-  background: var(--cor-card); border: 2px solid var(--cor-borda);
-  border-radius: 12px; padding: 1.25rem;
-}
-.card h3 { margin-top: 0; }
-
-.botao {
-  font: inherit; font-weight: 600; cursor: pointer; text-decoration: none;
-  display: inline-block; padding: 0.6rem 1.1rem; border-radius: 8px;
-  border: 2px solid var(--cor-botao);
-  background: var(--cor-botao); color: var(--cor-sobre-botao);
-}
-.botao:hover { opacity: 0.88; }
-/* Botão "ativo" (ex.: Apoio já escolhido) */
-.botao[aria-pressed="true"] { outline: 3px solid var(--cor-destaque); outline-offset: 2px; }
-.botao-claro { background: transparent; color: var(--cor-link); border-color: var(--cor-link); }
-
-.tag {
-  display: inline-block; padding: 0.15rem 0.7rem; margin: 0 0.3rem 0.4rem 0;
-  border-radius: 999px; font-size: 0.85rem; font-weight: 600;
-  border: 2px solid var(--cor-borda);
+  background: var(--branco);
+  border: 2px solid var(--borda);
+  border-radius: 12px;
+  /* cantos arredondados */
+  padding: 1.25rem;
 }
 
-.intro { max-width: 65ch; margin-bottom: 1.5rem; }
+.card h2,
+.card h3 {
+  margin-top: 0;
+}
+
+/* Cards da página inicial são links inteiros */
+.card-acesso {
+  display: block;
+  text-decoration: none;
+  color: var(--texto);
+}
+
+.card-acesso:hover {
+  border-color: var(--amarelo);
+}
+
+.card-acesso strong {
+  display: block;
+  font-size: 1.25rem;
+  color: var(--azul);
+}
 
 /* =========================================================
-   7. PÁGINA INICIAL
+   7. PEÇAS PEQUENAS: tag e botão
    ========================================================= */
-.hero { background: var(--cor-card); border-bottom: 2px solid var(--cor-borda); padding: 3rem 0; }
-.hero h1 { font-size: clamp(1.8rem, 5vw, 3rem); margin: 0 0 0.75rem; }
-.hero p { max-width: 60ch; font-size: 1.2rem; margin: 0 0 1.5rem; }
+.tag {
+  display: inline-block;
+  padding: 0.15rem 0.7rem;
+  margin: 0 0.3rem 0.4rem 0;
+  border: 2px solid var(--borda);
+  border-radius: 999px;
+  /* bem arredondado = formato de pílula */
+  font-size: 0.9rem;
+  font-weight: 600;
+}
 
-/* Card inteiro clicável (é um link <a>) */
-.card-acesso { display: block; text-decoration: none; color: var(--cor-texto); min-height: 9rem; }
-.card-acesso:hover { border-color: var(--cor-destaque); }
-.card-acesso strong { display: block; font-size: 1.25rem; color: var(--cor-titulo); margin-bottom: 0.4rem; }
-.secao { margin-top: 3rem; }
+.botao {
+  display: inline-block;
+  padding: 0.6rem 1.1rem;
+  background: var(--verde);
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.botao:hover {
+  opacity: 0.85;
+}
 
 /* =========================================================
    8. CANDIDATOS
    ========================================================= */
-.filtros { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; }
-.filtros label { display: block; font-weight: 600; margin-bottom: 0.25rem; }
-select, input[type="search"] {
-  font: inherit; padding: 0.5rem; border: 2px solid var(--cor-borda);
-  border-radius: 8px; background: var(--cor-card); color: var(--cor-texto);
-}
-input[type="search"] { width: 100%; max-width: 28rem; }
-
+/* Foto: um círculo com as iniciais */
 .foto {
-  width: 4.5rem; height: 4.5rem; border-radius: 50%; margin-bottom: 0.75rem;
-  display: flex; align-items: center; justify-content: center;
-  background: var(--cor-primaria); color: #FFFFFF; font-weight: 700; font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* centraliza o texto dentro do círculo */
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  /* 50% = círculo */
+  background: var(--azul);
+  color: var(--branco);
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
 }
-.alto-contraste .foto { background: #FFFFFF; color: #000000; }
 
-.acordeao-botao {
-  width: 100%; text-align: left; font: inherit; font-weight: 600; cursor: pointer;
-  padding: 0.6rem 0.8rem; margin-top: 0.5rem; border-radius: 8px;
-  border: 2px solid var(--cor-borda); background: transparent; color: var(--cor-texto);
+/* Acordeão feito com <details>: o navegador abre e fecha sozinho */
+details {
+  margin-top: 0.5rem;
 }
-.acordeao-botao[aria-expanded="true"] { border-color: var(--cor-destaque); }
-.acordeao-painel { padding: 0.5rem 0.5rem 0 1rem; }
+
+summary {
+  cursor: pointer;
+  /* mãozinha ao passar o mouse */
+  padding: 0.6rem 0.8rem;
+  border: 2px solid var(--borda);
+  border-radius: 8px;
+  font-weight: 600;
+}
 
 /* =========================================================
-   9. PROJETOS DE LEI (abas)
+   9. PROJETOS DE LEI
    ========================================================= */
-.abas { display: flex; gap: 0.5rem; margin: 1rem 0; }
-.aba-btn {
-  font: inherit; font-weight: 600; cursor: pointer; padding: 0.5rem 1rem;
-  border-radius: 8px; border: 2px solid var(--cor-borda);
-  background: transparent; color: var(--cor-texto);
+.bloco {
+  padding: 0.5rem 1rem;
+  border-left: 5px solid var(--amarelo);
 }
-.aba-btn[aria-selected="true"] { background: var(--cor-botao); color: var(--cor-sobre-botao); border-color: var(--cor-botao); }
-.aba-painel { padding: 1rem; border-left: 5px solid var(--cor-destaque); margin-bottom: 1rem; }
-.botoes-voto { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
 
 /* =========================================================
    10. GLOSSÁRIO
    ========================================================= */
-.termo { padding: 1rem 0; border-bottom: 1px solid var(--cor-borda); }
-.termo dt { font-weight: 700; font-size: 1.15rem; color: var(--cor-titulo); }
-.termo dd { margin: 0.25rem 0 0; max-width: 70ch; }
+.termo {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--borda);
+}
+
+.termo dt {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--azul);
+}
+
+.termo dd {
+  margin: 0.25rem 0 0;
+  max-width: 70ch;
+}
 
 /* =========================================================
-   11. PESQUISAS (formulário e barras)
+   11. PESQUISAS (barras)
    ========================================================= */
-fieldset { border: none; padding: 0; margin: 0 0 1rem; }
-legend { font-weight: 700; font-size: 1.15rem; margin-bottom: 0.5rem; }
-.opcao { display: flex; align-items: center; gap: 0.6rem; padding: 0.4rem 0; }
-.opcao input { width: 1.3rem; height: 1.3rem; accent-color: var(--cor-botao); }
-.msg-erro { color: #C53030; font-weight: 600; min-height: 1.5rem; }
-.alto-contraste .msg-erro { color: #FF8A80; }
+/* Cada linha tem 3 colunas: nome | barra | porcentagem */
+.linha-voto {
+  display: grid;
+  grid-template-columns: 7rem 1fr 3rem;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 0.5rem 0;
+}
 
-.linha-voto { display: grid; grid-template-columns: 7rem 1fr 3rem; gap: 0.5rem; align-items: center; margin: 0.5rem 0; }
-.barra { height: 1.1rem; background: var(--cor-borda); border-radius: 999px; overflow: hidden; }
-.alto-contraste .barra { background: #333333; }
-.barra-cheia { height: 100%; width: 0; background: var(--cor-botao); transition: width 0.5s; }
+.barra {
+  height: 1.1rem;
+  background: var(--borda);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+/* A largura da parte verde vem do HTML (style="width: 39%") */
+.barra-cheia {
+  height: 100%;
+  background: var(--verde);
+}
 
 /* =========================================================
    12. RODAPÉ
    ========================================================= */
-.rodape { background: var(--cor-barra-topo); color: var(--cor-sobre-barra); padding: 2rem 0; border-top: 5px solid var(--cor-destaque); }
-.rodape a { color: var(--cor-sobre-barra); }
-.rodape h2 { color: var(--cor-sobre-barra); font-size: 1.2rem; }
-.rodape-grade { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
-.rodape ul { padding-left: 1.1rem; margin: 0; }
-.direitos { margin: 1.5rem 0 0; font-size: 0.9rem; }
+.rodape {
+  background: var(--azul);
+  color: var(--branco);
+  padding: 2rem 0;
+  border-top: 5px solid var(--amarelo);
+}
 
-/* Celulares pequenos: barras de votação mais compactas */
+.rodape a {
+  color: var(--branco);
+}
+
+.rodape h2 {
+  color: var(--branco);
+  font-size: 1.2rem;
+}
+
+.rodape-grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.rodape ul {
+  padding-left: 1.1rem;
+  margin: 0;
+}
+
+.direitos {
+  margin: 1.5rem 0 0;
+  font-size: 0.9rem;
+}
+
+/* =========================================================
+   13. CELULAR PEQUENO
+   @media aplica as regras só quando a tela tem até 480px
+   ========================================================= */
 @media (max-width: 480px) {
-  .linha-voto { grid-template-columns: 5rem 1fr 2.8rem; }
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .linha-voto {
+    grid-template-columns: 5rem 1fr 2.8rem;
+  }
 }
